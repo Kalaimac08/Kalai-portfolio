@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KALAIARASAN - Portfolio</title>
+
+  <!-- Font Awesome for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <style>
+    :root {
+      --bg-color-dark: #000;
+      --text-color-dark: #fff;
+      --bg-color-light: #fff;
+      --text-color-light: #000;
+      --accent-color: #ff0000;
+    }
+
+    html[data-theme="dark"] {
+      background-color: var(--bg-color-dark);
+      color: var(--text-color-dark);
+    }
+
+    html[data-theme="light"] {
+      background-color: var(--bg-color-light);
+      color: var(--text-color-light);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      margin: 10px 0 5px;
+      font-size: 2em;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1em;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    a:hover {
+      color: var(--accent-color);
+      transition: color 0.3s ease;
+    }
+
+    .icon {
+      margin-right: 8px;
+    }
+
+    .btn {
+      background-color: var(--accent-color);
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      margin-top: 10px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #cc0000;
+    }
+
+    .toggle-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      img {
+        width: 80px;
+        height: 80px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.postimg.cc/xTrcLQvC/Kalai.png" alt="Your Image" />
+    <h1>KALAIARASAN</h1>
+    <p>Plant Technician</p>
+    <div class="toggle-container">
+      <button class="btn" onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+    </div>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I am a fast learner with a solid foundation in IT web development,
+      particularly in HTML. My educational background includes a diploma in
+      civil engineering, complemented by 3 and a half years of hands-on
+      experience in the civil engineering field. My versatile skills enable me
+      to bridge the gap between technology and construction, making me a
+      valuable asset in both domains.
+    </p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <p>This is one of my projects. You can provide details about the project here.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:kalaimac8808@gmail.com">
+        <i class="fas fa-envelope icon"></i>kalaimac8808@gmail.com
+      </a>
+    </p>
+    <p>
+      <a href="https://youtube.com/@kalaimac?si=zq1etj_K67wmwb7H" target="_blank">
+        <i class="fab fa-youtube icon"></i>Visit my YouTube page
+      </a>
+    </p>
+    <p>
+      <a href="https://docs.google.com/document/d/1Fv0xVanGNGhe-KJOTYR7FYsWccTUY8jA/edit?usp=drivesdk&ouid=101415456999040423834&rtpof=true&sd=true"
+         target="_blank"
+         class="btn">
+        <i class="fas fa-download icon"></i>View / Download Resume
+      </a>
+    </p>
+  </section>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.setAttribute('data-theme', html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+</body>
+</html>
